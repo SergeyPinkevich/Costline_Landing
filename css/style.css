@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-    font-family: "Comfortaa";
+    font-family: 'Poppins', sans-serif;
+    padding: 0 10% 0 10%;
 }
 
 .navigation-block {
@@ -9,9 +10,14 @@ body {
     background-color: white;
     display: flex;
     flex-direction: row;
-    height: 80px;
-    justify-content: center;
+    height: 72px;
+    justify-content: space-between;
     width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .navigation-container {
@@ -21,38 +27,30 @@ body {
     justify-content: center;
 }
 
-.navigation-item :hover {
-    background-color: rgba(217, 217, 217, .8);
-    border-radius: 8px;
-}
-
 .navigation-item {
-    margin: 20px 10px 20px 10px;
+    margin: 24px 18px 24px 18px;
 }
 
 .navigation-link {
     color: black;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 24px;
     padding: 12px 15px 12px 15px;
     text-decoration: none;
 }
 
-.download-button-container {
-    display: flex;
-    margin: 8px 54px 8px auto;
-}
-
 .download-button {
-    background-color: #4D84FF;
-    border-radius: 8px;
-    color: white;
+    background-color: #EDF3FF;
+    border-radius: 4px;
+    color: #4D84FF;
     border: none;
-    height: 44px;
-    width: 160px;
-    font-size: 20px;
+    height: 48px;
+    width: 150px;
+    font-size: 16px;
 }
 
 .download-button :hover {
-    background-color: #3359ab;
     border: none;
 }
