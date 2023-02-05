@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -8,6 +8,22 @@ h1 {
     font-size: 60px;
     font-weight: 700;
     line-height: 72px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.primary-color {
+    color: #4D84FF;
 }
 
 .navigation-block {
@@ -21,6 +37,7 @@ h1 {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
 }
 
 .logo-container {
@@ -66,10 +83,10 @@ h1 {
 .main-block {
     background-color: #F2F6FF;
     display: flex;
-    height: 750px;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 72px;
-    padding: 10% 18% 0 18%;
+    padding: 5% 18% 0 18%;
     width: 100%;
 }
 
@@ -77,6 +94,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 35%;
 }
 
 .main-block-title {
@@ -99,9 +117,54 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 72em;
 }
 
 .main-block-wave {
-    transform: rotate(180deg);
+    transform: scale(-1, 1) rotate(180deg);
+}
+
+.about-block {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18% 0 18%;
+    width: 100%;
+}
+
+.about-block-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-block-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: start;
+    margin-top: 64px;
+}
+
+.about-block-text-title {
+    margin-top: 12px;
+    max-width: 400px;
+}
+
+.about-block-text-advantage-block {
+    margin-top: 48px;
+    max-width: 400px;
+}
+
+.about-block-text-advantage-title {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.about-block-text-advantage-text {
+    color: #2B283DB2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px;
 }
