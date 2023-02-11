@@ -401,3 +401,109 @@ h3 {
     font-weight: 500;
     line-height: 24px;
 }
+
+.team-block-wave {
+    background-color: #F2F6FF;
+    width: 100%;
+    transform: scale(-1, 1);
+}
+
+.team-section {
+    align-items: center;
+    background-color: #F2F6FF;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 5% 18% 10% 18%;
+    width: 100%;
+}
+
+.team-section-description {
+    color: #2B283DB2;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+    margin-top: 64px;
+}
+
+.team-member-card {
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0px 3.67372px 30px rgba(51, 88, 171, 0.25));
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-width: 370px;
+    padding: 24px;
+    width: auto;
+}
+
+.team-member-image {
+    height: 200px;
+    margin-top: 16px;
+    min-height: 200px;
+    min-width: 200px;
+    width: 200px;
+}
+
+.team-member-name {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 47px;
+    margin-top: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-member-role {
+    font-weight: 400;
+    margin-top: 4px;
+    color: #2B283DB2;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.team-member-description {
+    color: #2B283DB2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 16px;
+    max-width: 320px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.team-member-contacts {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 48px;
+    gap: 32px;
+    align-items: center;
+}
+
+.team-member-contact-link {
+    vertical-align: middle;
+}
+
+.team-member-contact-icon {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.team-member-contact-icon-divider {
+    height: 24px;
+    width: 1px;
+} 
