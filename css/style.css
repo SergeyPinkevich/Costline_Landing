@@ -95,7 +95,7 @@ h3 {
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 72px;
-    padding: 5% 10% 0 18%;
+    padding: 5% 18% 0 18%;
     width: 100%;
 }
 
@@ -103,7 +103,9 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 35%;
+    width: auto;
+    max-width: 600px;
+    margin-right: 56px;
 }
 
 .main-block-title {
@@ -126,7 +128,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 900px;
+    max-width: 800px;
 }
 
 .main-block-wave {
@@ -146,6 +148,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     max-width: 560px;
+    margin-right: 32px;
 }
 
 .about-block-text {
@@ -195,9 +198,8 @@ h3 {
 }
 
 .features-block-image {
-    max-width: 600px;
-    position: absolute;
-    align-self: center;
+    max-width: 360px;
+    margin-top: 24px;
 }
 
 .features-block-content {
@@ -217,7 +219,8 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 72px;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 8% 0;
 }
 
 .features-description-icon {
