@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -250,13 +254,63 @@ h3 {
     transform: scale(1, 1) rotate(180deg);
 }
 
-.screenshots-block {
+.screenshot-section {
     align-items: center;
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 0 18% 0 18%;
+    justify-content: center;
+    padding: 0 18%;
     width: 100%;
+}
+
+.screenshot-text {
+    color: #2B283DB2;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 52px;
+    margin-top: 24px;
+    padding: 0 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#screenshot-carousel {
+    margin: 0 18% 8% 18%;
+}
+
+.screenshot-arrow-prev {
+    background: white;
+    box-shadow: 0px 1px 10px #0000001A;
+    height: 60px;
+    opacity: 1;
+    width: 60px;
+}
+
+.screenshot-arrow-next {
+    background: #4D84FF;
+    height: 60px;
+    opacity: 1;
+    width: 60px;
+}
+
+.screenshot-bullet-progress {
+    background: #EDF3FF;
+    height: 12px;
+    margin: 6px;
+    opacity: 1;
+    width: 12px;
+}
+
+.splide__pagination__page.is-active {
+    background: #4D84FF;
+    transform: scale(1.3);
+    z-index: 1;
+}
+
+.screenshot-image {
+    max-height: 315px;
 }
 
 .logo-icon {
@@ -275,7 +329,6 @@ h3 {
     margin: 0 18% 10% 18%;
     overflow: hidden;
     padding: 52px 190px 52px 190px;
-    position: relative;
     width: auto;
     z-index: 1;
 }
@@ -331,6 +384,7 @@ h3 {
     line-height: 28px;
     margin-bottom: 52px;
     margin-top: 24px;
+    text-align: center;
 }
 
 .subscription-block {

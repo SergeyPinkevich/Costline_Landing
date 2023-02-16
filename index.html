@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<link>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/reset.css">
-    </link>
-    <link rel="stylesheet" href="css/style.css">
-    </link>
+    <link rel="stylesheet" href="css/reset.css"></link>
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css"></link>
 </head>
 
 <body>
@@ -21,7 +20,7 @@
         <div class="navigation-container">
             <a href="#about" class="navigation-link">About</a>
             <a href="#features" class="navigation-link">Features</a>
-            <a href="#screenshots" class="navigation-link">Screenshots</a>
+            <a href="#screenshot" class="navigation-link">Screenshots</a>
             <a href="#pricing" class="navigation-link">Pricing</a>
             <a href="#team" class="navigation-link">Team</a>
             <a href="#contacts" class="navigation-link">Contacts</a>
@@ -45,7 +44,7 @@
     <img src="images/wave.svg" class="main-block-wave"/>
 
     <!-- About section -->
-    <section class="about-block">
+    <section class="about-block" id="about">
         <div class="about-block-image">
             <img src="images/about_illustration.png"/>
         </div>
@@ -81,7 +80,7 @@
     </div>
 
     <!-- Features section -->
-    <section class="features-block">
+    <section class="features-block" id="features">
         <h2>App features</h2>
         <div class="features-block-content">
             <div class="features-block-content-description">
@@ -150,6 +149,58 @@
 
     <img src="images/wave.svg" class="screenshots-block-wave"/>
 
+    <!-- Screenshots section -->
+    <section class="screenshot-section" id="screenshot">
+        <h2>Checkout app screenshots</h2> 
+        <p class="screenshot-text">These images will give you a glimpse into how our app works and what you can expect when you start using Costline.</p>
+    </section>
+
+    <section id="screenshot-carousel" class="splide" aria-label="Screenshots">
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev screenshot-arrow-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="#4D84FF"></path></svg>
+            </button>
+            <button class="splide__arrow splide__arrow--next screenshot-arrow-next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="#FFFFFF"></path></svg>
+            </button>
+        </div>
+
+        <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="images/screenshot1.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot2.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot3.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot1.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot2.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot3.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot1.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot2.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot3.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/screenshot1.png">
+                </li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Download section -->
     <section class="download-section">
         <div class="download-banner-ellipsis-1"></div>
@@ -161,7 +212,7 @@
     </section>
 
     <!-- Subscription section -->
-    <section class="subscription-section">
+    <section class="subscription-section" id="pricing">
         <h2>Choose you subscription</h2> 
         <p class="subscription-text">Start using CostLine right now, free. You can download our app from Google Play. </p>
         
@@ -225,7 +276,7 @@
     </div>
 
     <!-- Team section -->
-    <section class="team-section">
+    <section class="team-section" id="team">
         <h2>Our reative team</h2> 
         <p class="team-section-description">We're a passionate team of finance and technology experts who are dedicated to helping you take control of your finances. Our goal is to create the best budgeting app on the market, and we're committed to making budgeting simple, accessible, and enjoyable for everyone.</p>
         <div class="team-members">
@@ -262,13 +313,13 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="footer-content">
             <img src="images/logo_text.svg" class="footer-logo"/>
             <div class="footer-menu">
                 <a href="#about" class="footer-link">About</a>
                 <a href="#features" class="footer-link">Features</a>
-                <a href="#screenshots" class="footer-link">Screenshots</a>
+                <a href="#screenshot" class="footer-link">Screenshots</a>
                 <a href="#pricing" class="footer-link">Pricing</a>
                 <a href="#team" class="footer-link">Team</a>
                 <a href="#contacts" class="footer-link">Contacts</a>
@@ -285,6 +336,8 @@
         </div>
     </footer>
 
+    <script src="script/splide.min.js"></script>
+    <script src="script/index.js"></script>
 </body>
 
 </html>
