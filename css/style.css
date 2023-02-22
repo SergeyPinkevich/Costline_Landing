@@ -99,6 +99,51 @@ h3 {
     width: 48px;
 }
 
+#mobile-menu-block {
+    align-items: center;
+    background: white;
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;    
+}
+
+#open-menu {
+    display: none;
+}
+
+#close-menu {
+    display: none;
+    margin: 12px 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mobile-navigation-link {
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.mobile-support-link {
+    bottom: 0;
+    color: #4D84FF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 40px;
+    position: absolute;
+}
+
 .wave-block {
     background-color: #F2F6FF;
     width: 100%;
@@ -151,7 +196,7 @@ h3 {
     align-items: center;
     background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 32px;
     justify-content: center;
     margin: 0 auto;
@@ -176,7 +221,6 @@ h3 {
     flex-direction: column;
     flex-grow: 1;
     justify-content: start;
-    margin-top: 64px;
 }
 
 .about-block-text-title {
@@ -753,7 +797,16 @@ h3 {
         margin: 0 32px;
     }
 
+    .main-block-title,
+    .main-block-subtitle,
+    .about-block-text,
+    .about-block-text-title,
+    .about-block-text-advantage-text {
+        text-align: center;
+    }
+
     .about-section {
+        flex-direction: column;
         padding-left: 32px;
         padding-right: 32px;
     }
@@ -778,6 +831,10 @@ h3 {
         display: block;
     }
 
+    #open-menu {
+        display: block;
+    }
+
     .main-block {
         flex-direction: column;
     }
@@ -787,17 +844,17 @@ h3 {
         max-width: none;
     }
 
-    .main-block-title {
-        text-align: center;
-    }
-
-    .main-block-subtitle {
-        text-align: center;
-    }
-
     .main-block-image {
         margin: 0 auto;
         max-width: 480px;
+    }
+
+    .about-block-text-advantage-block {
+        margin: 48px auto 0 auto;
+    }
+
+    .about-block-text-advantage-title {
+        justify-content: center;
     }
 
     .about-block-image {
@@ -840,6 +897,29 @@ h3 {
     }
 
     .footer-menu {
+        align-items: center;
+        flex-direction: column;
         gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 16px;
     }
 }

@@ -27,7 +27,24 @@
                 <a href="#contacts" class="navigation-link">Contacts</a>
             </div>
             <button class="download-button">Download app</button>
-            <img src="images/menu.svg" class="navigation-menu">
+            <a href="javascript:void(0);" id="open-menu" onclick="openMenu()">
+                <img src="images/menu.svg" class="navigation-menu">
+            </a>
+        </div>
+        <!-- Navigation menu for tablets and phones -->
+        <div id="mobile-menu-block">
+            <a href="javascript:void(0);" id="close-menu" onclick="closeMenu()" >
+                <img src="images/close.svg" class="navigation-menu">
+            </a>
+            <a href="#about" class="mobile-navigation-link" onclick="closeMenu()">About</a>
+            <a href="#features" class="mobile-navigation-link" onclick="closeMenu()">Features</a>
+            <a href="#screenshot" class="mobile-navigation-link" onclick="closeMenu()">Screenshots</a>
+            <a href="#pricing" class="mobile-navigation-link" onclick="closeMenu()">Pricing</a>
+            <a href="#team" class="mobile-navigation-link" onclick="closeMenu()">Team</a>
+            <a href="#contacts" class="mobile-navigation-link" onclick="closeMenu()">Contacts</a>
+            <a href="mailto: support@costline.app" class="mobile-support-link">
+                support@costline.app
+            </a>
         </div>
     </nav>
 
@@ -51,7 +68,6 @@
 
     <!-- About section -->
     <section class="about-section" id="about">
-        <div class="about-block-image"></div>
         <div class="about-block-text">
             <h3 class="primary-color">About our app</h3>
             <h2 class="about-block-text-title">Manage your finance using our user-friendly Android app</h2>
@@ -77,6 +93,7 @@
                 <p class="about-block-text-advantage-text">Use tens of default categories that will help you to setup your budget and track it on the go</p>
             </div>
         </div>
+        <div class="about-block-image"></div>
     </section>
 
     <div class="wave-block">
