@@ -1,18 +1,21 @@
-const splide = new Splide( '#screenshot-carousel', {
-  type: 'loop',
-  perPage: 3,
-  focus: 'center',
-  speed: 800,
-  classes: {
-    page  : 'splide__pagination__page screenshot-bullet-progress',
+function initSlider() {
+  var screenshotsPerPage = 3;
+  if (window.innerWidth < 480) {
+    screenshotsPerPage = 1
   }
-});
+  var splide = new Splide( '#screenshot-carousel', {
+    type: 'loop',
+    perPage: screenshotsPerPage,
+    focus: 'center',
+    speed: 800,
+    classes: {
+      page  : 'splide__pagination__page screenshot-bullet-progress',
+    }
+  });
+  splide.mount();
+}
 
-splide.mount()
-
-window.addEventListener('resize', function(event) {
-  // TODO implement slider per page 1
-});
+window.onload = initSlider;
 
 function openMenu() {
   var hamburgerMenu = document.getElementById("mobile-menu-block");

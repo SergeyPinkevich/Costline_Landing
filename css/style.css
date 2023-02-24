@@ -54,8 +54,13 @@ h3 {
 }
 
 .logo-container {
-    align-items: center;
-    display: flex;
+    background: url(../images/logo_text.svg) no-repeat;
+    background-position: center; 
+    background-size: contain;
+    height: 24px;
+    max-height: 100%;
+    max-width: 100%;
+    width: 142px;
 }
 
 .navigation-container {
@@ -96,6 +101,8 @@ h3 {
 .navigation-menu {
     display: none;
     height: 48px;
+    min-height: 48px;
+    min-width: 48px;
     width: 48px;
 }
 
@@ -107,10 +114,11 @@ h3 {
     gap: 40px;
     height: 100vh;
     justify-content: center;
+    min-width: 300px;  
     position: absolute;
     right: 0;
     top: 0;
-    width: 50%;    
+    width: 50%;  
 }
 
 #open-menu {
@@ -336,6 +344,10 @@ h3 {
     width: 100%;
 }
 
+.screenshot-title {
+    text-align: center;
+}
+
 .screenshot-text {
     color: #2B283DB2;
     font-size: 20px;
@@ -343,7 +355,6 @@ h3 {
     line-height: 28px;
     margin-bottom: 52px;
     margin-top: 24px;
-    padding: 0 100px;
     text-align: center;
     width: 100%;
 }
@@ -450,15 +461,23 @@ h3 {
 }
 
 .subscription-section {
+    margin: 0 auto;
+    padding: 128px 0;
+    width: 100%;
+}
+
+.subscription-content {
     align-items: center;
     display: flex;
     flex-direction: column;
     height: auto;
     margin: 0 auto;
     max-width: 1200px;
-    padding-bottom: 128px;
-    padding-top: 128px;
     width: 100%;
+}
+
+.subscription-title {
+    text-align: center;
 }
 
 .subscription-text {
@@ -466,7 +485,6 @@ h3 {
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
-    margin-bottom: 52px;
     margin-top: 24px;
     text-align: center;
 }
@@ -477,6 +495,7 @@ h3 {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
+    margin-top: 48px;
 }
 
 .subscription-item {
@@ -754,6 +773,11 @@ h3 {
         max-width: 900px;
     }
 
+    .logo-container {
+        background-position: left;
+        flex-grow: 1;
+    }
+
     .about-section {
         padding-bottom: 96px;
         padding-top: 72px;
@@ -776,6 +800,10 @@ h3 {
         text-align: center;
     }
 
+    .screenshot-text {
+        padding: 0 32px;
+    }
+
     .screenshot-arrow-prev {
         visibility: hidden;
     }
@@ -785,7 +813,7 @@ h3 {
     }
 
     .subscription-block {
-        margin: 0 64px;
+        margin: 48px 128px 0 128px;
     }
 }
 
@@ -812,15 +840,11 @@ h3 {
     }
 
     .subscription-section {
-        padding: 64px 32px;
+        padding: 128px 32px;
     }
 
     .navigation-block-content {
         gap: 24px;
-    }
-
-    .logo-container {
-        flex-grow: 1;
     }
 
     .navigation-container {
@@ -876,16 +900,8 @@ h3 {
         width: auto;
     }
 
-    .subscription-section {
-        padding: 128px 0;
-    }
-
     .subscription-block {
-        margin: 0;
-    }
-
-    .subscription-text {
-        padding: 0 32px;
+        margin: 48px 24px 0 24px;
     }
 
     .team-section {
@@ -921,5 +937,31 @@ h3 {
 
     p {
         font-size: 16px;
+    }
+
+    .logo-container {
+        background: url(../images/logo_icon.svg) no-repeat;
+        height: 32px;
+        width: 32px;
+    }
+
+    .screenshot-title {
+        padding: 0 32px;
+    }
+
+    .splide__pagination {
+        margin-top: 24px;
+    }
+
+    .subscription-text {
+        margin-top: 16px;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .footer-info {
+        padding: 0 32px;
     }
 }
