@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="root">
 
 <link>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <!-- Navigation bar -->
     <nav class="navigation-block">
         <div class="navigation-block-content">
-            <div class="logo-container"></div>
+            <a href="#root" class="logo-container"></a>
             <div class="navigation-container">
                 <a href="#about" class="navigation-link">About</a>
                 <a href="#features" class="navigation-link">Features</a>
@@ -52,9 +52,7 @@
             <div class="main-block-text">
                 <h1 class="main-block-title">Track your budget on the go</h1>
                 <span class="main-block-subtitle">Take control of your finances and stay on top of your budget with ease</span>
-                <div class="main-block-button">
-                    <img src="images/google_play.png" width="158"/>
-                </div>
+                <a class="main-block-button"></a>
             </div>
             <div class="main-block-image">
                 <img src="images/main_illustration.png"/>
@@ -134,7 +132,7 @@
                 </div>
                 
                 <div class="features-block-image">
-                    <img src="images/features_illustration.png"/>
+                    <img src="images/screenshot_4.png"/>
                 </div>
 
                 <div class="features-block-content-description">
@@ -191,34 +189,25 @@
         <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                    <img src="images/screenshot1.png">
+                    <img src="images/screenshot_1.png">
                 </li>
                 <li class="splide__slide">
-                    <img src="images/screenshot2.png">
+                    <img src="images/screenshot_2.png">
                 </li>
                 <li class="splide__slide">
-                    <img src="images/screenshot3.png">
+                    <img src="images/screenshot_3.png">
                 </li>
                 <li class="splide__slide">
-                    <img src="images/screenshot1.png">
+                    <img src="images/screenshot_4.png">
                 </li>
                 <li class="splide__slide">
-                    <img src="images/screenshot2.png">
+                    <img src="images/screenshot_5.png">
                 </li>
                 <li class="splide__slide">
-                    <img src="images/screenshot3.png">
+                    <img src="images/screenshot_6.png">
                 </li>
                 <li class="splide__slide">
-                    <img src="images/screenshot1.png">
-                </li>
-                <li class="splide__slide">
-                    <img src="images/screenshot2.png">
-                </li>
-                <li class="splide__slide">
-                    <img src="images/screenshot3.png">
-                </li>
-                <li class="splide__slide">
-                    <img src="images/screenshot1.png">
+                    <img src="images/screenshot_7.png">
                 </li>
             </ul>
         </div>
@@ -343,17 +332,17 @@
     <footer class="footer" id="contacts">
         <div class="footer-block">
             <div class="footer-content">
-                <img src="images/logo_text.svg" class="footer-logo"/>
+                <a href="#root" class="footer-logo"></a>
                 <div class="footer-menu">
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#features" class="footer-link">Features</a>
-                    <a href="#screenshot" class="footer-link">Screenshots</a>
-                    <a href="#pricing" class="footer-link">Pricing</a>
-                    <a href="#team" class="footer-link">Team</a>
-                    <a href="#contacts" class="footer-link">Contacts</a>
+                    <a href="#about" class="footer-navigation-link">About</a>
+                    <a href="#features" class="footer-navigation-link">Features</a>
+                    <a href="#screenshot" class="footer-navigation-link">Screenshots</a>
+                    <a href="#pricing" class="footer-navigation-link">Pricing</a>
+                    <a href="#team" class="footer-navigation-link">Team</a>
+                    <a href="#contacts" class="footer-navigation-link">Contacts</a>
                 </div>
                 <div class="footer-support-link">
-                    <a href="mailto: support@costline.app">
+                    <a href="mailto: support@costline.app" class="footer-support-link-text">
                         <img src="images/mail2.svg" class="footer-support-link-icon"/>
                         support@costline.app
                     </a>
@@ -361,9 +350,9 @@
             </div>
             <div class="footer-info">
                 © Costline 2023 | 
-                <a>Privacy policy</a> |
-                <a>Terms of Service</a> |
-                <a>Licenses</a>
+                <a class="footer-link">Privacy policy</a> |
+                <a class="footer-link">Terms of Service</a> |
+                <a class="footer-link">Licenses</a>
             </div>
         </div>
     </footer>
