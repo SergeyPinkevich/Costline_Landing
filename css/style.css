@@ -192,7 +192,7 @@ h3 {
 }
 
 .main-block-button {
-    background: url(../images/google_play.png) no-repeat;
+    background: url(../images/google_play.webp) no-repeat;
     background-position: center;
     background-size: cover;
     height: 54px;
@@ -222,7 +222,7 @@ h3 {
 }
 
 .about-block-image {
-    background: url(../images/about_illustration.png) no-repeat;
+    background: url(../images/about_illustration.webp) no-repeat;
     background-position: center; 
     background-size: contain;
     height: 600px;
@@ -906,7 +906,7 @@ h3 {
     }
 
     .about-block-image {
-        background: url(../images/screenshot_2.png) no-repeat;
+        background: url(../images/screenshot_2.webp) no-repeat;
         background-position: center; 
         background-size: contain;
         height: 600px;
