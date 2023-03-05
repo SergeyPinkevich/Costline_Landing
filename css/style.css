@@ -6,6 +6,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 h1, h2, h3, p, a {
@@ -987,6 +988,12 @@ h3 {
 
     .screenshot-title {
         padding: 0 32px;
+    }
+
+    .screenshot-image {
+        display: block;
+        height: 600px;
+        margin: auto;
     }
 
     .splide__pagination {

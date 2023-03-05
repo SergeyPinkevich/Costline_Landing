@@ -1,15 +1,15 @@
 function initSlider() {
   var screenshotsPerPage = 3;
   if (window.innerWidth < 480) {
-    screenshotsPerPage = 1
+    screenshotsPerPage = 1;
   }
-  var splide = new Splide( '#screenshot-carousel', {
+  var splide = new Splide('#screenshot-carousel', {
     type: 'loop',
     perPage: screenshotsPerPage,
     focus: 'center',
     speed: 800,
     classes: {
-      page  : 'splide__pagination__page screenshot-bullet-progress',
+      page: 'splide__pagination__page screenshot-bullet-progress',
     }
   });
   splide.mount();
@@ -33,7 +33,7 @@ function closeMenu() {
 
 var openInterval = null;
 function animateOpening() {
-  var hamburgerMenu = document.getElementById("mobile-menu-block"); 
+  var hamburgerMenu = document.getElementById("mobile-menu-block");
   var offsetRight = -50;
   clearInterval(openInterval);
 
@@ -43,14 +43,14 @@ function animateOpening() {
       clearInterval(openInterval);
     } else {
       offsetRight++;
-      hamburgerMenu.style.right = offsetRight + "%"; 
+      hamburgerMenu.style.right = offsetRight + "%";
     }
   }
 }
 
 var closeInterval = null;
 function animateClosing() {
-  var hamburgerMenu = document.getElementById("mobile-menu-block"); 
+  var hamburgerMenu = document.getElementById("mobile-menu-block");
   var offsetRight = 0;
   clearInterval(closeInterval);
 
@@ -61,7 +61,7 @@ function animateClosing() {
       hamburgerMenu.style.display = "none";
     } else {
       offsetRight--;
-      hamburgerMenu.style.right = offsetRight + "%"; 
+      hamburgerMenu.style.right = offsetRight + "%";
     }
   }
 }
