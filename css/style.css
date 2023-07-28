@@ -54,6 +54,7 @@ h3 {
     height: 72px;
     justify-content: space-between;
     margin: 0 auto;
+    padding: 0 32px;
     max-width: 1200px;
 }
 
@@ -172,7 +173,7 @@ h3 {
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1200px;
-    padding-top: 56px;
+    padding: 56px 32px 0 32px;
 }
 
 .main-block-text {
@@ -216,8 +217,7 @@ h3 {
     justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
-    padding-bottom: 56px;
-    padding-top: 128px;
+    padding: 128px 32px 56px 32px;
     width: 100%;
 }
 
@@ -274,7 +274,7 @@ h3 {
     flex-direction: column;
     margin: 0 auto;
     max-width: 1200px;
-    padding-top: 128px;
+    padding: 128px 32px 0 32px;
 }
 
 .features-block-wave {
@@ -347,7 +347,7 @@ h3 {
     justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
-    padding-top: 128px;
+    padding: 128px 32px 0 32px;
     width: 100%;
 }
 
@@ -369,6 +369,7 @@ h3 {
 #screenshot-carousel {
     margin: 0 auto;
     max-width: 1200px;
+    padding: 0 32px;
 }
 
 .screenshot-arrow-prev {
@@ -408,7 +409,7 @@ h3 {
 .download-section {
     margin: 0 auto;
     max-width: 1200px;
-    padding-top: 128px;
+    padding: 128px 32px 0 32px;
     width: 100%;
 }
 
@@ -492,7 +493,7 @@ h3 {
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
-    margin-top: 24px;
+    margin: 24px 48px 0 48px;
     text-align: center;
 }
 
@@ -591,6 +592,7 @@ h3 {
     height: auto;
     margin: 0 auto;
     max-width: 1200px;
+    padding: 0 32px;
 }
 
 .team-section-description {
@@ -693,7 +695,7 @@ h3 {
     height: auto;
     margin: 0 auto;
     max-width: 1200px;
-    padding-top: 72px;
+    padding: 72px 32px 0 32px;
 }
 
 .footer-content {
@@ -792,19 +794,6 @@ h3 {
         line-height: 42px;
     }
 
-    .navigation-block-content, 
-    .main-block, 
-    .about-section, 
-    .features-block, 
-    .screenshot-section, 
-    #screenshot-carousel, 
-    .download-block, 
-    .subscription-section,
-    .team-block,
-    .footer-block {
-        max-width: 900px;
-    }
-
     .logo-container {
         background-position: left;
         flex-grow: 1;
@@ -845,11 +834,11 @@ h3 {
     }
 
     .subscription-block {
-        margin: 48px 128px 0 128px;
+        margin: 48px 72px 0 72px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .navigation-block-content,
     .main-block,
     .features-block,
@@ -857,6 +846,25 @@ h3 {
         margin: 0 32px;
     }
 
+    .navigation-block-content {
+        gap: 24px;
+        padding: 0;
+    }
+
+    .navigation-container {
+        display: none;
+    }
+
+    .navigation-menu {
+        display: block;
+    }
+
+    #open-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
     .main-block-title,
     .main-block-subtitle,
     .about-block-text,
@@ -873,22 +881,6 @@ h3 {
 
     .subscription-section {
         padding: 128px 32px;
-    }
-
-    .navigation-block-content {
-        gap: 24px;
-    }
-
-    .navigation-container {
-        display: none;
-    }
-
-    .navigation-menu {
-        display: block;
-    }
-
-    #open-menu {
-        display: block;
     }
 
     .main-block {
@@ -941,6 +933,7 @@ h3 {
     }
 
     .team-members {
+        flex-direction: column;
         gap: 24px;
     }
 
@@ -1017,10 +1010,6 @@ h3 {
 
     .subscription-text {
         margin-top: 16px;
-    }
-
-    .team-members {
-        flex-direction: column;
     }
 
     .team-member-name {
