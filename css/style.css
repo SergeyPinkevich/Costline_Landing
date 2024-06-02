@@ -1012,8 +1012,20 @@ h3 {
         margin-top: 16px;
     }
 
+    .team-section {
+        padding: 128px 16px;
+    }
+
+    .team-block {
+        padding: 0 16px;
+    }
+
     .team-member-name {
         margin-top: 20px;
+    }
+
+    .team-member-description {
+        padding: 0;
     }
 
     .team-member-contacts {
