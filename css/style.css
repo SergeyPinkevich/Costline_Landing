@@ -986,6 +986,11 @@ h3 {
         width: 32px;
     }
 
+    .features-block {
+        margin: 0 12px;
+        padding: 128px 0px 0 0px;
+    }
+
     .screenshot-title {
         padding: 0 32px;
     }
