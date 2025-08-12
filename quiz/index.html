@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting Knowledge Quiz</title>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="269e48bc-eb47-479a-8fc6-8217448127fa"></script>
+    <style>
+        /* Helper to use hex colors and other properties as variables */
+        :root {
+            --primary-blue: #4D84FF;
+            --light-blue: #E8F1FF;
+            --dark-blue: #3366CC;
+            --success-green: #28A745;
+            --error-red: #DC3545;
+            --text-dark: #2C3E50;
+            --text-gray: #6C757D;
+            --background-light: #FAFBFC;
+            --white: #FFFFFF;
+            --shadow: 0 4px 20px rgba(77, 132, 255, 0.15);
+            --shadow-hover: 0 6px 30px rgba(77, 132, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--background-light) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .quiz-container {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .quiz-container:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--light-blue);
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+            border-radius: 3px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .question-number {
+            color: var(--text-gray);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .question-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .option-button {
+            background: var(--white);
+            border: 1px solid #E1E8ED;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            position: relative;
+            outline: none;
+        }
+
+        .option-button:hover {
+            border-color: var(--primary-blue);
+            background: var(--light-blue);
+            /* transform: translateY(-1px); */ 
+        }
+        
+        /* 
+        .option-button:active {
+            transform: translateY(0);
+        } 
+        */
+
+        .option-button.correct {
+            border-color: var(--success-green);
+            background: #F0F8F0;
+            color: var(--success-green);
+        }
+
+        .option-button.incorrect {
+            border-color: var(--error-red);
+            background: #FDF2F2;
+            color: var(--error-red);
+        }
+
+        .option-button.disabled {
+            cursor: not-allowed;
+        }
+
+        .explanation {
+            background: var(--light-blue);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: var(--text-gray);
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: end;
+        }
+
+        .next-button {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background: var(--dark-blue);
+        }
+
+        .next-button.show {
+            display: inline-block;
+        }
+
+        .results {
+            text-align: center;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .score-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .cta-message {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(77, 132, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(77, 132, 255, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .quiz-container {
+                padding: 24px;
+                border-radius: 12px;
+            }
+
+            .question-text {
+                font-size: 20px;
+            }
+
+            .option-button {
+                padding: 14px 16px;
+                font-size: 15px;
+            }
+
+            .score {
+                font-size: 36px;
+            }
+
+            .score-text {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quiz-container {
+                padding: 20px;
+            }
+
+            .question-text {
+                font-size: 18px;
+            }
+
+            .option-button {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+
+            .cta-button {
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header">
+            <div class="logo">💰 Budget Quiz</div>
+            <div class="subtitle">Test your budgeting knowledge</div>
+        </div>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div id="questionContainer" class="question-container">
+            <div class="question-number" id="questionNumber">Question 1 of 7</div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options-container" id="optionsContainer"></div>
+            <div class="explanation" id="explanation"></div>
+            <div class="button-wrapper">
+                <button class="next-button" id="nextButton" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+
+        <div id="results" class="results">
+            <div class="score">
+                <span id="correctAnswers">0</span>
+                <span>/</span>
+                <span id="totalAnswers">7</span>
+            </div>
+            <div class="score-text"><span id="scorePrefix"></span><br>You answered correctly on <span id="scoreText">0</span>% of the questions!</div>
+            <div class="cta-message" id="ctaMessage"></div>
+            <div id="ctaContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                "question": "What is the best description of the 'pay yourself first' method?",
+                "options": [
+                    "Buying something you want before paying bills",
+                    "Setting aside money for savings before paying for other expenses",
+                    "Paying off credit cards at the end of the year",
+                    "Giving gifts to friends before budgeting"
+                ],
+                "correct": 1,
+                "explanation": "The 'pay yourself first' method means prioritizing savings by setting aside money before covering other expenses."
+            },
+            {
+                "question": "Why is it important to track all your expenses?",
+                "options": [
+                    "To prepare for a loan application",
+                    "To identify where your money goes and control spending",
+                    "To pay taxes on time",
+                    "To compare your spending with friends"
+                ],
+                "correct": 1,
+                "explanation": "Tracking expenses helps you understand your spending habits and find areas where you can reduce costs to save more."
+            },
+            {
+                "question": "Which of the following is a 'need' rather than a 'want'?",
+                "options": [
+                    "A monthly streaming subscription",
+                    "New smartphone upgrade",
+                    "Rent or mortgage payment",
+                    "Designer shoes"
+                ],
+                "correct": 2,
+                "explanation": "Needs are essentials for living, such as housing, food, and utilities, while wants are non-essential extras."
+            },
+            {
+                "question": "If you face an unexpected large expense, what is the best approach?",
+                "options": [
+                    "Use your emergency fund",
+                    "Put it on a credit card and ignore the balance",
+                    "Ask friends for money before trying anything else",
+                    "Stop paying other bills temporarily"
+                ],
+                "correct": 0,
+                "explanation": "An emergency fund is specifically set aside to cover unexpected expenses without going into debt."
+            },
+            {
+                "question": "What is the benefit of setting spending limits for categories in your budget?",
+                "options": [
+                    "It guarantees you will save the same amount each month",
+                    "It eliminates the need to track expenses",
+                    "It helps you avoid paying taxes",
+                    "It prevents overspending in certain areas"
+                ],
+                "correct": 3,
+                "explanation": "Spending limits keep your expenses under control and ensure money is available for other priorities."
+            },
+            {
+                "question": "Which of the following is the best example of a financial goal?",
+                "options": [
+                    "Spending less on groceries",
+                    "Avoiding credit card debt",
+                    "Saving enough to buy a car in 2 years",
+                    "Cooking at home more often"
+                ],
+                "correct": 2,
+                "explanation": "A financial goal should be specific, measurable, and time-bound, like saving for a car within a set timeframe."
+            },
+            {
+                "question": "If you regularly overspend your budget each month, what is the most effective first step?",
+                "options": [
+                    "Take out a loan to cover the overspending",
+                    "Cut back on non-essential expenses",
+                    "Ignore it and hope income increases",
+                    "Switch to cash-only payments for all expenses"
+                ],
+                "correct": 1,
+                "explanation": "Cutting non-essential expenses helps bring spending back in line with your budget without increasing debt."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        function loadQuestion() {
+            answered = false;
+            const question = quizData[currentQuestion];
+            
+            // Update progress bar
+            const progress = ((currentQuestion + 1) / quizData.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            // Update question content
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
+            document.getElementById('questionText').textContent = question.question;
+            
+            // Create option buttons
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'option-button';
+                button.textContent = option;
+                button.onclick = () => selectAnswer(index);
+                optionsContainer.appendChild(button);
+            });
+            
+            // Hide explanation and next button
+            document.getElementById('explanation').classList.remove('show');
+            document.getElementById('nextButton').classList.remove('show');
+        }
+
+        function selectAnswer(selectedIndex) {
+            if (answered) return;
+            
+            answered = true;
+            const question = quizData[currentQuestion];
+            const optionButtons = document.querySelectorAll('.option-button');
+            
+            // Disable all buttons and show results
+            optionButtons.forEach((button, index) => {
+                button.classList.add('disabled');
+                if (index === question.correct) {
+                    button.classList.add('correct');
+                } else if (index === selectedIndex) {
+                    button.classList.add('incorrect');
+                }
+            });
+            
+            // Update score if correct
+            if (selectedIndex === question.correct) {
+                score++;
+            }
+            
+            // Show explanation
+            const explanationDiv = document.getElementById('explanation');
+            explanationDiv.textContent = question.explanation;
+            explanationDiv.classList.add('show');
+            
+            // Show next button
+            if (currentQuestion == quizData.length - 1) {
+                document.getElementById('nextButton').textContent = "Show results"
+            }
+            document.getElementById('nextButton').classList.add('show');
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            // Hide question container
+            document.getElementById('questionContainer').style.display = 'none';
+            
+            // Hide progress
+            document.getElementById('progressBar').style.display = 'none';
+            document.getElementById('progressFill').style.display = 'none';
+            
+            // Show results
+            const percentage = Math.round((score / quizData.length) * 100);
+            document.getElementById('correctAnswers').textContent = score;
+            document.getElementById('totalAnswers').textContent = quizData.length;
+            document.getElementById('scoreText').textContent = percentage;
+
+            var scorePrefixText;
+            if (score == quizData.length) {
+                scorePrefixText = '🌟 Perfect score! '
+            } else if (score >= 3 && score <= quizData.length - 1) {
+                scorePrefixText = '🎉 Well done! '
+            } else {
+                scorePrefixText = '📚 Keep learning :) '
+            }
+            document.getElementById('scorePrefix').textContent = scorePrefixText;
+            
+            const ctaMessage = document.getElementById('ctaMessage');
+            const ctaContainer = document.getElementById('ctaContainer');
+            
+            if (score <= 6) {
+                ctaMessage.textContent = "Want to improve your budgeting skills? Our app makes budgeting fun, simple, and effective — helping you build confidence and financial freedom";        
+            } else {
+                ctaMessage.textContent = "You clearly know your stuff — now keep those skills sharp with our budgeting app";
+            }
+            ctaContainer.innerHTML = '<button class="cta-button" data-umami-event="Download" data-umami-event-source="quiz"><a href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Dquiz_button">Download app</a></button>';
+            
+            document.getElementById('results').classList.add('show');
+        }
+
+        // Initialize the quiz
+        loadQuestion();
+    </script>
+</body>
+</html>
