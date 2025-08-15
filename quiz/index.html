@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budgeting Knowledge Quiz</title>
+    <title>Costline | Budget Quiz</title>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="269e48bc-eb47-479a-8fc6-8217448127fa"></script>
     <style>
         /* Helper to use hex colors and other properties as variables */
@@ -63,11 +63,21 @@
             margin-bottom: 40px;
         }
 
-        .logo {
+        .header-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .header-image {
+            width: 28px;
+            height: auto;
+        }
+
+        .header-text {
             font-size: 32px;
             font-weight: 700;
             color: var(--primary-blue);
-            margin-bottom: 8px;
         }
 
         .subtitle {
@@ -115,6 +125,7 @@
         }
 
         .option-button {
+            font-family: 'Poppins', sans-serif;
             background: var(--white);
             border: 1px solid #E1E8ED;
             border-radius: 12px;
@@ -183,6 +194,7 @@
         }
 
         .next-button {
+            font-family: 'Poppins', sans-serif;
             background: var(--primary-blue);
             color: var(--white);
             border: none;
@@ -193,7 +205,6 @@
             cursor: pointer;
             transition: all 0.2s ease;
             display: none;
-            margin-top: 20px;
         }
 
         .next-button:hover {
@@ -239,6 +250,7 @@
         }
 
         .cta-button {
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
             color: var(--white);
             border: none;
@@ -257,7 +269,7 @@
             box-shadow: 0 6px 20px rgba(77, 132, 255, 0.4);
         }
 
-        /* Responsive Design */
+        /* Tablet */
         @media (max-width: 768px) {
             body {
                 padding: 16px;
@@ -286,13 +298,31 @@
             }
         }
 
+        /* Smartphone */
         @media (max-width: 480px) {
+            .header {
+                margin-bottom: 24px;
+            }
+
+            .header-text {
+                font-size: 24px;
+            }
+
+            .header-image {
+                width: 24px;
+            }
+
+            .progress-bar {
+                margin-bottom: 20px;
+            }
+
             .quiz-container {
                 padding: 20px;
             }
 
             .question-text {
                 font-size: 18px;
+                margin-bottom: 20px;
             }
 
             .option-button {
@@ -310,7 +340,10 @@
 <body>
     <div class="quiz-container">
         <div class="header">
-            <div class="logo">💰 Budget Quiz</div>
+            <div class="header-container">
+                <img src="../images/logo_icon.svg" alt="Costline Logo" class="header-image">
+                <div class="header-text">Budget Quiz</div>
+            </div>
             <div class="subtitle">Test your budgeting knowledge</div>
         </div>
 
