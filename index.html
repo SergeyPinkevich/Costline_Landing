@@ -5,14 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Track expenses by voice, photo, or typing. Costline is the smart Android budget app with AI receipt scanning, spending insights, and offline mode. Free download.">
 
-    <title>Costline | Android app for budget tracking</title>
+    <title>Costline – AI Budget Tracker for Android | Voice & Photo Expense Entry</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Costline – AI Budget Tracker for Android">
+    <meta property="og:description" content="Track expenses by voice, photo, or typing. Free Android budget app.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://costline.app/">
+    <meta property="og:image" content="https://costline.app/og-image.png">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Costline – AI Budget Tracker for Android">
+    <meta name="twitter:description" content="Track expenses by voice, photo, or typing.">
+
+    <!-- Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Costline",
+        "operatingSystem": "Android",
+        "applicationCategory": "FinanceApplication",
+        "description": "AI-powered Android budget tracker with voice input, photo receipt scanning, and spending insights.",
+        "featureList": [
+            "Voice transaction input",
+            "AI receipt scanning",
+            "Budget insights and projections",
+            "Offline mode",
+            "Multi-currency support",
+            "Recurring transactions"
+        ],
+        "downloadUrl": "https://play.google.com/store/apps/details?id=app.costline",
+        "screenshot": "https://costline.app/images/screenshot_4.webp",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "1"
+        }
+    }
+    </script>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="269e48bc-eb47-479a-8fc6-8217448127fa"></script>
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="269e48bc-eb47-479a-8fc6-8217448127fa"></script>
 </head>
 
 <body>
@@ -28,17 +75,22 @@
                 <a href="#team" class="navigation-link">Team</a>
                 <a href="#contacts" class="navigation-link">Contacts</a>
             </div>
-            <a href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Dnavigation_button"><button class="download-button" data-umami-event="Download" data-umami-event-source="navigation_bar">Download app</button></a>
+            <a
+                href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Dnavigation_button">
+                <button class="download-button" data-umami-event="Download" data-umami-event-source="navigation_bar">
+                    Get the App
+                </button>
+            </a>
             <a href="javascript:void(0);" id="open-menu" onclick="openMenu()">
                 <img src="images/menu.svg" class="navigation-menu" alt="Open menu">
             </a>
         </div>
         <!-- Navigation menu for tablets and phones -->
         <div id="mobile-menu-block">
-            <a href="javascript:void(0);" id="close-menu" onclick="closeMenu()" >
+            <a href="javascript:void(0);" id="close-menu" onclick="closeMenu()">
                 <img src="images/close.svg" class="navigation-menu" alt="Close menu">
             </a>
-            
+
             <a href="#about" class="mobile-navigation-link" onclick="closeMenu()">About</a>
             <a href="#features" class="mobile-navigation-link" onclick="closeMenu()">Features</a>
             <a href="#screenshot" class="mobile-navigation-link" onclick="closeMenu()">Screenshots</a>
@@ -56,74 +108,81 @@
     <section class="main-section">
         <div class="main-block">
             <div class="main-block-text">
-                <h1 class="main-block-title">Plan your budget on the go</h1>
-                <span class="main-block-subtitle">Take control of your finances and stay on top of your budget with ease</span>
-                <a href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Dmain_section_button" class="main-block-button" data-umami-event="Download" data-umami-event-source="main_section"></a>
+                <h1 class="main-block-title">Track Expenses in Seconds with Voice & AI</h1>
+                <span class="main-block-subtitle">Log expenses by voice, photo, or typing. Simple budgeting for real
+                    life</span>
+                <a href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Dmain_section_button"
+                    class="main-block-button" data-umami-event="Download" data-umami-event-source="main_section"></a>
             </div>
             <div class="main-block-image">
-                <img src="images/main_illustration.webp" alt=""/>
+                <img src="images/main_illustration.webp" alt="" />
             </div>
         </div>
     </section>
-    
-    <img src="images/wave.svg" alt=""/>
+
+    <img src="images/wave.svg" alt="" />
 
     <!-- About section -->
     <section class="about-section" id="about">
         <div class="about-block-text">
-            <h3 class="primary-color">About our app</h3>
+            <h3 class="primary-color">Why Costline?</h3>
             <h2 class="about-block-text-title">Manage your finance using our user-friendly Android app</h2>
             <div class="about-block-text-advantage-block">
                 <div class="about-block-text-advantage-title">
                     <img src="images/checkbox.svg" class="checkbox" alt="" />
-                    <h3>Creative design</h3>
+                    <h3>AI-Powered Input</h3>
                 </div>
-                <p class="about-block-text-advantage-text">Intuitive and user-friendly interface for a pleasant budgeting experience</p>
-            </div>
-            <div class="about-block-text-advantage-block">
-                <div class="about-block-text-advantage-title">
-                    <img src="images/checkbox.svg" class="checkbox" alt="" />
-                    <h3>Offline mode</h3>
-                </div>
-                <p class="about-block-text-advantage-text">No internet is needed to get an access to your transactions history and budget</p>
+                <p class="about-block-text-advantage-text">Snap a photo of any receipt — Costline reads it automatically
+                    using AI</p>
             </div>
             <div class="about-block-text-advantage-block">
                 <div class="about-block-text-advantage-title">
                     <img src="images/checkbox.svg" class="checkbox" alt="" />
                     <h3>Predefined setup</h3>
                 </div>
-                <p class="about-block-text-advantage-text">Use tens of default categories that will help you to setup your budget and track it on the go</p>
+                <p class="about-block-text-advantage-text">Start instantly with 30+ built-in categories. Customize
+                    freely or use the defaults</p>
+            </div>
+            <div class="about-block-text-advantage-block">
+                <div class="about-block-text-advantage-title">
+                    <img src="images/checkbox.svg" class="checkbox" alt="" />
+                    <h3>Offline mode</h3>
+                </div>
+                <p class="about-block-text-advantage-text">Works completely offline. Your data is always available,
+                    anywhere you go</p>
             </div>
         </div>
         <div class="about-block-image"></div>
     </section>
 
     <div class="wave-block">
-        <img src="images/wave_white.svg" class="features-block-wave" alt=""/>
+        <img src="images/wave_white.svg" class="features-block-wave" alt="" />
     </div>
 
     <!-- Features section -->
     <section class="features-section" id="features">
         <div class="features-block">
-            <h2>App features</h2>
+            <h2>Smart Features for Smarter Budgeting</h2>
             <div class="features-block-content">
                 <div class="features-block-content-description">
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/arrows.svg" class="features-description-image" alt="">
+                            <img src="images/photo.svg" class="features-description-image" alt="">
                         </div>
                         <div class="features-description-text-block">
-                            <h3 class="features-description-title">Transactions</h3>
-                            <p class="features-description-text">Record income and expenses as they occur to keep a real-time record of your finances</p>
+                            <h3 class="features-description-title">Photo Scan</h3>
+                            <p class="features-description-text">Snap a receipt and let AI read it. Amount, date, and
+                                category - captured automatically</p>
                         </div>
                     </div>
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/document.svg" class="features-description-image" alt="">
+                            <img src="images/mic.svg" class="features-description-image" alt="">
                         </div>
                         <div class="features-description-text-block">
-                            <h3 class="features-description-title">Reports</h3>
-                            <p class="features-description-text">Comprehensive overview of your financial situation, making it easier to understand your spending habits</p>
+                            <h3 class="features-description-title">Voice Input</h3>
+                            <p class="features-description-text">Say "I bought coffee for five dollars today" and it's
+                                logged. Faster than typing</p>
                         </div>
                     </div>
                     <div class="features-block-description">
@@ -132,32 +191,35 @@
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Budget setup</h3>
-                            <p class="features-description-text">Decide how much money you want to spend on things like food, housing, transportation, etc</p>
+                            <p class="features-description-text">Decide how much money you want to spend on things like
+                                food, housing, transportation, etc.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="features-block-image">
-                    <img src="images/screenshot_4.webp"/>
+                    <img src="images/screenshot_4.webp" />
                 </div>
 
                 <div class="features-block-content-description">
+                    <div class="features-block-description">
+                        <div class="features-description-icon">
+                            <img src="images/recurring.svg" class="features-description-image" alt="">
+                        </div>
+                        <div class="features-description-text-block">
+                            <h3 class="features-description-title">Recurring</h3>
+                            <p class="features-description-text">Set up rent, subscriptions, or salary once. They're
+                                added automatically each month</p>
+                        </div>
+                    </div>
                     <div class="features-block-description">
                         <div class="features-description-icon">
                             <img src="images/graph.svg" class="features-description-image" alt="">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Categories</h3>
-                            <p class="features-description-text">Create new categories and customize it as you want to reflect your spendings</p>
-                        </div>
-                    </div>
-                    <div class="features-block-description">
-                        <div class="features-description-icon">
-                            <img src="images/search.svg" class="features-description-image" alt="">
-                        </div>
-                        <div class="features-description-text-block">
-                            <h3 class="features-description-title">Search</h3>
-                            <p class="features-description-text">Search across of all your transactions by value, note or category</p>
+                            <p class="features-description-text">Create custom categories with icons and colors. Premium
+                                unlocks unlimited</p>
                         </div>
                     </div>
                     <div class="features-block-description">
@@ -166,7 +228,8 @@
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Balance</h3>
-                            <p class="features-description-text">Get overview what is your balance value considering income and expenses at the current moment</p>
+                            <p class="features-description-text">Get overview what is your balance value considering
+                                income and expenses at the current moment</p>
                         </div>
                     </div>
                 </div>
@@ -174,26 +237,33 @@
         </div>
     </section>
 
-    <img src="images/wave.svg"/>
+    <img src="images/wave.svg" />
 
     <!-- Screenshots section -->
     <section class="screenshot-section" id="screenshot">
-        <h2 class="screenshot-title">Checkout app screenshots</h2> 
-        <p class="screenshot-text">These images will give you a glimpse into how our app works and what you can expect when you start using Costline.</p>
+        <h2 class="screenshot-title">See Costline in Action</h2>
+        <p class="screenshot-text">A quick look at the screens you'll use every day—from logging expenses to tracking
+            your budget</p>
     </section>
 
     <section id="screenshot-carousel" class="splide" aria-label="Screenshots">
         <div class="splide__arrows">
             <button class="splide__arrow splide__arrow--prev screenshot-arrow-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="#4D84FF"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                    <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+                        fill="#4D84FF"></path>
+                </svg>
             </button>
             <button class="splide__arrow splide__arrow--next screenshot-arrow-next">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="#FFFFFF"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                    <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+                        fill="#FFFFFF"></path>
+                </svg>
             </button>
         </div>
 
         <div class="splide__track">
-              <ul class="splide__list">
+            <ul class="splide__list">
                 <li class="splide__slide">
                     <img src="images/screenshot_1.webp" class="screenshot-image" alt="">
                 </li>
@@ -229,25 +299,42 @@
     <section class="download-section">
         <div class="download-block">
             <img src="images/logo_icon.svg" class="logo-icon" alt="">
-            <h2 class="download-title">Don't wait and start now!</h2>
-            <p class="download-text">Start using CostLine right now, free. You can download our app from Google Play. We're really excited about you using this smart, on-the-go financial solution</p>
-            <a href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Ddownload_section_button"><button class="download-button download-section-button" data-umami-event="Download" data-umami-event-source="download_section">Download app</button></a>
+            <h2 class="download-title">Ready to Take Control?</h2>
+            <p class="download-text">Download Costline free from Google Play. Start tracking your spending in under a
+                minute - no signup required</p>
+            <a
+                href="https://play.google.com/store/apps/details?id=app.costline&referrer=utm_source%3Dwebsite%26utm_medium%3Ddownload_section_button"><button
+                    class="download-button download-section-button" data-umami-event="Download"
+                    data-umami-event-source="download_section">Start Tracking Free</button></a>
         </div>
     </section>
 
     <!-- Subscription section -->
     <section class="subscription-section" id="pricing">
         <div class="subscription-content">
-            <h2 class="subscription-title">Choose you subscription</h2> 
-            <p class="subscription-text">Start using CostLine right now, free. You can download our app from Google Play. </p>
-            
+            <h2 class="subscription-title">Choose Your Plan</h2>
+            <p class="subscription-text">Start free. Upgrade when you're ready. No hidden fees, no data selling — ever.
+            </p>
+
             <div class="subscription-block">
                 <div class="subscription-item">
                     <div class="subscription-item-price-free primary-color">Free</div>
                     <div class="subscription-item-features-block">
                         <div class="subscription-item-feature">
                             <img src="images/checkbox.svg" class="checkbox" alt="" />
+                            <p class="subscription-feature-text">Full expense & income tracking</p>
+                        </div>
+                        <div class="subscription-item-feature">
+                            <img src="images/checkbox.svg" class="checkbox" alt="" />
+                            <p class="subscription-feature-text">30+ default categories</p>
+                        </div>
+                        <div class="subscription-item-feature">
+                            <img src="images/checkbox.svg" class="checkbox" alt="" />
                             <p class="subscription-feature-text">Up to 3 custom categories</p>
+                        </div>
+                        <div class="subscription-item-feature">
+                            <img src="images/checkbox.svg" class="checkbox" alt="" />
+                            <p class="subscription-feature-text">Voice & photo input</p>
                         </div>
                     </div>
                 </div>
@@ -255,6 +342,8 @@
                     <div class="subscription-item-period">1 month</div>
                     <div class="subscription-item-price">$3.99</div>
                     <div class="subscription-item-features-block">
+                        <p class="subscription-feature-text subscription-feature-text-black">Everything in Free, plus
+                        </p>
                         <div class="subscription-item-feature">
                             <img src="images/checkbox.svg" class="checkbox" alt="" />
                             <p class="subscription-feature-text">Unlimited custom categories</p>
@@ -269,6 +358,8 @@
                     <div class="subscription-item-period">12 months</div>
                     <div class="subscription-item-price">$29.99</div>
                     <div class="subscription-item-features-block">
+                        <p class="subscription-feature-text subscription-feature-text-black">Everything in Free, plus
+                        </p>
                         <div class="subscription-item-feature">
                             <img src="images/checkbox.svg" class="checkbox" alt="" />
                             <p class="subscription-feature-text">Unlimited custom categories</p>
@@ -283,6 +374,8 @@
                     <div class="subscription-item-period">Unlimited</div>
                     <div class="subscription-item-price">$59.99</div>
                     <div class="subscription-item-features-block">
+                        <p class="subscription-feature-text subscription-feature-text-black">Everything in Free, plus
+                        </p>
                         <div class="subscription-item-feature">
                             <img src="images/checkbox.svg" class="checkbox" alt="" />
                             <p class="subscription-feature-text">Unlimited custom categories</p>
@@ -298,27 +391,29 @@
     </section>
 
     <div class="wave-block">
-        <img src="images/wave_white.svg" class="team-block-wave"/>
+        <img src="images/wave_white.svg" class="team-block-wave" />
     </div>
 
     <!-- Team section -->
     <section class="team-section" id="team">
         <div class="team-block">
-            <h2>Our reative team</h2> 
-            <p class="team-section-description">We're a passionate team of finance and technology experts who are dedicated to helping you take control of your finances. Our goal is to create the best budgeting app on the market, and we're committed to making budgeting simple, accessible, and enjoyable for everyone.</p>
+            <h2>Meet the Team</h2>
+            <p class="team-section-description">Two people. One mission: make budgeting so simple you'll actually do it.
+                We built Costline for ourselves first — now we're sharing it with you.</p>
             <div class="team-members">
                 <div class="team-member-card">
                     <img src="images/avatar1.webp" class="team-member-image" alt="">
                     <p class="team-member-name">Sergey Pinkevich</p>
                     <p class="team-member-role">PM/Developer</p>
-                    <p class="team-member-description">"I am happy to combine 2 roles: product manager and developer. I get to solve tricky coding problems and also help decide what our products should be, which makes each day interesting and rewarding."</p>
+                    <p class="team-member-description">"I built Costline because budgeting apps were either too complex
+                        or too basic. I wanted something I'd actually use every day — quick, reliable, and smart."</p>
                     <div class="team-member-contacts">
                         <a href="mailto: sergeipinkevich163@gmail.com">
-                            <img src="images/mail.svg" class="team-member-contact-icon" alt="Send email"/>
+                            <img src="images/mail.svg" class="team-member-contact-icon" alt="Send email" />
                         </a>
-                        <img src="images/divider.svg" class="team-member-contact-icon-divider"/>
+                        <img src="images/divider.svg" class="team-member-contact-icon-divider" />
                         <a href="https://www.linkedin.com/in/sergey-pinkevich/" target="_blank">
-                            <img src="images/linkedin.svg" class="team-member-contact-icon" alt="Open LinkedIn"/>
+                            <img src="images/linkedin.svg" class="team-member-contact-icon" alt="Open LinkedIn" />
                         </a>
                     </div>
                 </div>
@@ -326,14 +421,15 @@
                     <img src="images/avatar2.webp" class="team-member-image">
                     <p class="team-member-name">Alesia Mazuro</p>
                     <p class="team-member-role">UX/UI Designer</p>
-                    <p class="team-member-description">"I am glad to be responsible for making UX research and UI design for an Android app and this landing page. I am pleased to be an author of the design system and behavior animation in the app"</p>
+                    <p class="team-member-description">"I design for clarity. Every screen is crafted to help you log
+                        expenses in seconds, not minutes. Simple doesn't mean boring — it means intentional."</p>
                     <div class="team-member-contacts">
                         <a href="mailto: alesik.mazuro@gmail.com">
-                            <img src="images/mail.svg" class="team-member-contact-icon" alt="Send email"/>
+                            <img src="images/mail.svg" class="team-member-contact-icon" alt="Send email" />
                         </a>
-                        <img src="images/divider.svg" class="team-member-contact-icon-divider" alt=""/>
+                        <img src="images/divider.svg" class="team-member-contact-icon-divider" alt="" />
                         <a href="https://www.linkedin.com/in/alesia-mazuro/" target="_blank">
-                            <img src="images/linkedin.svg" class="team-member-contact-icon" alt="Open LinkedIn"/>
+                            <img src="images/linkedin.svg" class="team-member-contact-icon" alt="Open LinkedIn" />
                         </a>
                     </div>
                 </div>
@@ -355,16 +451,20 @@
                 </div>
                 <div class="footer-support-link">
                     <a href="mailto: support@costline.app" class="footer-support-link-text">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-support-link-icon">
-                            <path d="M9.5 12.5L16 17L22.5 12.5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.66669 22.6665V9.33317C2.66669 8.62593 2.94764 7.94765 3.44774 7.44755C3.94783 6.94746 4.62611 6.6665 5.33335 6.6665H26.6667C27.3739 6.6665 28.0522 6.94746 28.5523 7.44755C29.0524 7.94765 29.3334 8.62593 29.3334 9.33317V22.6665C29.3334 23.3737 29.0524 24.052 28.5523 24.5521C28.0522 25.0522 27.3739 25.3332 26.6667 25.3332H5.33335C4.62611 25.3332 3.94783 25.0522 3.44774 24.5521C2.94764 24.052 2.66669 23.3737 2.66669 22.6665Z" stroke-width="3"/>
-                        </svg>                            
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="footer-support-link-icon">
+                            <path d="M9.5 12.5L16 17L22.5 12.5" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M2.66669 22.6665V9.33317C2.66669 8.62593 2.94764 7.94765 3.44774 7.44755C3.94783 6.94746 4.62611 6.6665 5.33335 6.6665H26.6667C27.3739 6.6665 28.0522 6.94746 28.5523 7.44755C29.0524 7.94765 29.3334 8.62593 29.3334 9.33317V22.6665C29.3334 23.3737 29.0524 24.052 28.5523 24.5521C28.0522 25.0522 27.3739 25.3332 26.6667 25.3332H5.33335C4.62611 25.3332 3.94783 25.0522 3.44774 24.5521C2.94764 24.052 2.66669 23.3737 2.66669 22.6665Z"
+                                stroke-width="3" />
+                        </svg>
                         support@costline.app
                     </a>
                 </div>
             </div>
             <div class="footer-info">
-                © 2026 Costline | 
+                © 2026 Costline |
                 <a href="privacy.html" class="footer-link">Privacy policy</a> |
                 <a href="terms.html" class="footer-link">Terms of Service</a>
             </div>

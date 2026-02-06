@@ -8,7 +8,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3, p, a {
+h1,
+h2,
+h3,
+p,
+a {
     color: #2B283D;
 }
 
@@ -60,7 +64,7 @@ h3 {
 
 .logo-container {
     background: url(../images/logo_text.svg) no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: contain;
     height: 24px;
     max-height: 100%;
@@ -118,11 +122,11 @@ h3 {
     gap: 40px;
     height: 100vh;
     justify-content: center;
-    min-width: 300px;  
+    min-width: 300px;
     position: absolute;
     right: 0;
     top: 0;
-    width: 50%;  
+    width: 50%;
 }
 
 #open-menu {
@@ -223,7 +227,7 @@ h3 {
 
 .about-block-image {
     background: url(../images/about_illustration.webp) no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: contain;
     height: 600px;
     max-height: 100%;
@@ -430,6 +434,8 @@ h3 {
 
 .download-section-button {
     margin-top: 12px;
+    width: auto;
+    padding: 0 32px;
 }
 
 .download-title {
@@ -571,6 +577,12 @@ h3 {
     line-height: 24px;
 }
 
+.subscription-feature-text-black {
+    color: #000000;
+    padding-top: 24px;
+    padding-bottom: 13px;
+}
+
 .team-block-wave {
     background-color: #F2F6FF;
     width: 100%;
@@ -682,7 +694,7 @@ h3 {
 .team-member-contact-icon-divider {
     height: 24px;
     width: 1px;
-} 
+}
 
 .footer {
     background-color: #2B283D;
@@ -727,12 +739,12 @@ h3 {
     width: 100%;
 }
 
-.footer-support-link > * {
+.footer-support-link>* {
     stroke: white;
 }
 
-.footer-support-link:hover > * {
-    color: #4D84FF; 
+.footer-support-link:hover>* {
+    color: #4D84FF;
     stroke: #4D84FF;
 }
 
@@ -839,6 +851,7 @@ h3 {
 }
 
 @media (max-width: 920px) {
+
     .navigation-block-content,
     .main-block,
     .features-block,
@@ -865,6 +878,7 @@ h3 {
 }
 
 @media (max-width: 768px) {
+
     .main-block-title,
     .main-block-subtitle,
     .about-block-text,
@@ -907,7 +921,7 @@ h3 {
 
     .about-block-image {
         background: url(../images/screenshot_2.webp) no-repeat;
-        background-position: center; 
+        background-position: center;
         background-size: contain;
         height: 600px;
         max-height: 100%;
