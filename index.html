@@ -11,6 +11,14 @@
     <title>Costline – AI Budget Tracker for Android | Voice & Photo Expense Entry</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+    <!-- Preconnect to external origins for faster resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cloud.umami.is">
+
+    <!-- Preload LCP image for faster rendering -->
+    <link rel="preload" as="image" href="images/main_illustration.webp" fetchpriority="high">
+
     <!-- Open Graph tags for social sharing -->
     <meta property="og:title" content="Costline – AI Budget Tracker for Android">
     <meta property="og:description" content="Track expenses by voice, photo, or typing. Free Android budget app.">
@@ -55,10 +63,18 @@
     }
     </script>
 
+    <!-- Critical CSS loaded synchronously -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="https://cloud.umami.is/script.js"
+
+    <!-- Non-critical CSS (carousel) loaded with lower priority -->
+    <link rel="stylesheet" href="css/splide.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/splide.min.css">
+    </noscript>
+
+    <!-- Analytics script with async loading -->
+    <script async src="https://cloud.umami.is/script.js"
         data-website-id="269e48bc-eb47-479a-8fc6-8217448127fa"></script>
 </head>
 
@@ -82,13 +98,13 @@
                 </button>
             </a>
             <a href="javascript:void(0);" id="open-menu" onclick="openMenu()">
-                <img src="images/menu.svg" class="navigation-menu" alt="Open menu">
+                <img src="images/menu.svg" class="navigation-menu" alt="Open menu" width="48" height="48">
             </a>
         </div>
         <!-- Navigation menu for tablets and phones -->
         <div id="mobile-menu-block">
             <a href="javascript:void(0);" id="close-menu" onclick="closeMenu()">
-                <img src="images/close.svg" class="navigation-menu" alt="Close menu">
+                <img src="images/close.svg" class="navigation-menu" alt="Close menu" width="48" height="48">
             </a>
 
             <a href="#about" class="mobile-navigation-link" onclick="closeMenu()">About</a>
@@ -167,7 +183,8 @@
                 <div class="features-block-content-description">
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/photo.svg" class="features-description-image" alt="">
+                            <img src="images/photo.svg" class="features-description-image" alt="Photo scan feature"
+                                width="28" height="28" loading="lazy">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Photo Scan</h3>
@@ -177,7 +194,8 @@
                     </div>
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/mic.svg" class="features-description-image" alt="">
+                            <img src="images/mic.svg" class="features-description-image" alt="Voice input feature"
+                                width="28" height="28" loading="lazy">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Voice Input</h3>
@@ -187,7 +205,8 @@
                     </div>
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/wallet.svg" class="features-description-image" alt="">
+                            <img src="images/wallet.svg" class="features-description-image" alt="Budget setup feature"
+                                width="28" height="28" loading="lazy">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Budget setup</h3>
@@ -198,13 +217,15 @@
                 </div>
 
                 <div class="features-block-image">
-                    <img src="images/screenshot_4.webp" />
+                    <img src="images/screenshot_4.webp" alt="Costline app screenshot" width="360" height="780"
+                        loading="lazy" />
                 </div>
 
                 <div class="features-block-content-description">
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/recurring.svg" class="features-description-image" alt="">
+                            <img src="images/recurring.svg" class="features-description-image"
+                                alt="Recurring transactions feature" width="28" height="28" loading="lazy">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Recurring</h3>
@@ -214,7 +235,8 @@
                     </div>
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/graph.svg" class="features-description-image" alt="">
+                            <img src="images/graph.svg" class="features-description-image" alt="Categories feature"
+                                width="28" height="28" loading="lazy">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Categories</h3>
@@ -224,7 +246,8 @@
                     </div>
                     <div class="features-block-description">
                         <div class="features-description-icon">
-                            <img src="images/dollar.svg" class="features-description-image" alt="">
+                            <img src="images/dollar.svg" class="features-description-image" alt="Balance feature"
+                                width="28" height="28" loading="lazy">
                         </div>
                         <div class="features-description-text-block">
                             <h3 class="features-description-title">Balance</h3>
@@ -298,7 +321,7 @@
     <!-- Download section -->
     <section class="download-section">
         <div class="download-block">
-            <img src="images/logo_icon.svg" class="logo-icon" alt="">
+            <img src="images/logo_icon.svg" class="logo-icon" alt="Costline logo" width="40" height="40" loading="lazy">
             <h2 class="download-title">Ready to Take Control?</h2>
             <p class="download-text">Download Costline free from Google Play. Start tracking your spending in under a
                 minute - no signup required</p>
